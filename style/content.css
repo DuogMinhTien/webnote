@@ -1,0 +1,282 @@
+@import url("prism-plugin.css");
+@import url("prism.css");
+/* fallback */
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+	overflow-x: hidden;
+	min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+	background-color: transparent;
+	opacity: 0.5;
+	width: 11px;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: rgba(128,128,128,0.2);
+	border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(128,128,128,1);
+	border-radius: 15px;
+}
+
+@font-face {
+	font-family: 'Material Icons Outlined';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
+}
+
+.material-icons-outlined {
+	font-family: 'Material Icons Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	margin: 20px 30px;
+	color: #53BA66;
+	text-shadow: 1px 1px 10px yellow;
+	font-size: 2.5rem;
+}
+
+h2 {
+	margin-left: 15px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 5px gold;
+	color: orange;
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 25px;
+	text-align: left;
+	width: 90%;
+	text-transform: uppercase;
+	margin-top: 25px;
+	text-shadow: 0 0 10px yellow;
+}
+
+.wellDiv {
+	/*Make div to pretty*/
+	display: block;
+	clear: both;
+	margin-left: 15px;
+	position: relative;
+	height: auto;
+}
+
+.titleNice {
+	/*Make color text to beautiful*/
+	margin: 15px 25px;
+	font-size: 30px;
+	color: white;
+	text-transform: uppercase;
+	text-shadow: -2px -1px 3px black,
+	1px 1px yellow,
+	2px 2px orange,
+	3px 3px darkorange,
+	4px 4px red,
+	5px 5px darkred;
+}
+
+.explain li {
+	margin-left: 35px;
+	font-size: 18px;
+	white-space: pre-line;
+}
+
+note {
+	/*Element for note*/
+	width: 90%;
+	font-style: italic;	
+	margin-top: 10px;
+	font-size: 17px;
+	display: block;
+}
+
+.wellDiv note {
+	/*Use for wellDiv, width note change 90% to 100%*/
+	width: 100% !important;
+}
+
+.titlePart {
+	/*Title for a div, highlight for title*/
+	display: inline-block;
+	font-weight: bold;
+	font-size: 25px;
+	text-shadow: 0 0 2px black,
+	0 0 5px red;
+	color: orange;
+	text-transform: uppercase;
+	font-family: "Arial";
+	background-color: red;
+	border-radius: 10px;
+	padding: 10px 20px;
+	display: block;
+	margin: 15px 5px;
+}
+/*Style text--------------------*/
+.bold {
+	font-weight: bold !important;
+}
+
+.not_bold {
+	font-weight: normal !important;
+}
+
+.italic {
+	font-style: italic !important;
+}
+
+.not_italic {
+	font-style: normal !important;
+}
+
+.underline {
+	text-decoration: underline !important;
+}
+
+.not_underline {
+	text-decoration: none !important;
+}
+/*Style text--------------------*/
+.cre {
+	/*Reference sources, it is usually used for tag a*/
+	text-decoration: none;
+	font-size: 20px;
+	color: darkred;
+	position: relative;
+	margin: 8px 25px;
+	font-weight: bold;
+	text-shadow: 0 0 10px yellow;
+	display: block;
+	background-color: rgba(235,235,235,1);
+	padding: 10px 15px;
+	border-radius: 10px;
+}
+/*START CRE:-------------------*/
+.cre::before {
+	content: "";
+    position: absolute;
+    top: 8px;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent transparent brown;
+    border-style: solid;
+    border-width: 12px;
+}
+
+.cre:hover {
+
+	text-shadow: 0 0 10px orange;
+	background-color: orange;
+	color: black;
+}
+
+/*END CRE:-------------------*/
+
+hr.hrBest {
+	width: 90%;
+	transform: translateX(5%);
+}
+
+.ClickBTN {
+	/*Click button, 3D effects*/
+	display: block;
+	border-radius: 15px;
+	background-color: #53BA66;
+	cursor: pointer;
+	font-size: 20px;
+	padding: 10px 20px;
+	color: white;
+	border-style: none;
+	box-shadow: 0 9px #999;
+	margin: 20px 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.ClickBTN:active {
+	/*When the button is pressed*/
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+/*START CODE DIV:---------------------*/
+/*User manual*/
+/*
+	<div class="code">
+		<pre><code>[Code area]</code></pre>
+		<button class="ClickBTN copy" onclick="Copy()">Copy Code</button>
+		<!--Copy code-->
+	</div>
+*/
+.code pre {
+	width: 90vw;
+	border-radius: 10px !important;
+}
+
+pre > code {
+	font-family: monospace, sans-serif;
+	font-size: 1.2rem !important;
+	display: block;
+	overflow: auto;
+	white-space: pre-line !important;
+}
+
+.code {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 100vw;
+}
+
+/*END CODE DIV:----------------------*/
+
+
+.copy {
+	/*Change background color for Copy Button, used with class ClickBTN*/
+	background-color: orange !important;
+}
+
+.hidden {
+	/*Hidden by display*/
+	display: none !important;
+}
+
+.showed_btn_open_code {
+	/*Change background color of button when open source code*/
+	background-color: red !important;
+}
+
+@media only screen and (max-width: 500px) {
+	h1 {
+		font-size: 2.3rem;
+	}
+	h2 {
+		font-size: 1.8rem;
+	}
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<link rel="icon" href="icon.png"  type="image/x-icon">
+	<title>Web Note</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+		rel="stylesheet"
+    />
+</head>
+<body>
+	<div id="loaded" class="hidden">
+		<div class="double-loading">
+			<div class="c1"></div>
+			<div class="c2"></div>
+		</div>
+	</div>
+	<header>
+		<ul id="ChooseStyle">
+			<li><a href="#">Code</a></li>
+			<li><a href="#">Tài Nguyên</a></li>
+			<li><a href="#">Web Hay</a></li>
+			<li><a href="#">Thư Viện</a></li>
+			<li><a href="#">Thuật Toán</a></li>
+			<li><a href="#">Blog</a></li>
+		</ul>
+		<ul id="nav">
+			<li><a class="ChooseStyleJS" href="#slider_HTML">HTML</a></li>
+			<li><a class="ChooseStyleJS" href="#slider_CSS">CSS</a></li>
+			<li><a class="ChooseStyleJS" href="#slider_JS">JS</a></li>
+			<li><a class="ChooseStyleJS" href="#slider_C">C</a></li>
+			<li><a class="ChooseStyleJS" href="#slider_CPP">C++</a></li>
+			<li><a class="ChooseStyleJS" href="#slider_CSharp">C#</a></li>
+			<li><a class="ChooseStyleJS" href="#slider_Java">JAVA</a></li>
+		</ul>
+	</header>
+	<div>
+		<div id="slider">
+			<p id="closeSlide" onclick="closeSlide()">X</p>
+			<div id="slideContent">
+
+
+
+				<h3 id="slider_HTML">HTML</h3>
+				<ul>
+					<li id="MetaViewport" class="slider_code slider_active">Meta viewport</li>
+				</ul>
+
+
+				<h3 id="slider_CSS">CSS</h3>
+				<ul>
+					<li id="ResetCss" class="slider_code">Reset trong CSS</li>
+					<li id="DisableHighlight" class="slider_code">Chống bôi trang web</li>
+					<li>Giao diện lưới thuần CSS</li>
+					<li>Responsive trong CSS</li>
+				</ul>
+				
+				
+				<h3 id="slider_JS">JS</h3>
+				<ul>
+					<li id="CookieInJS" class="slider_code">Cookie trong JS</li>
+				</ul>
+
+				<h3 id="slider_C">C</h3>
+				<ul>
+					<li id="TextColor" class="slider_code">Đổi màu chữ</li>
+					<li>Đổi màu background</li>
+					<li>Dọn sạch màn hình</li>
+					<li>Ẩn con trỏ</li>
+					<li>Hàm random</li>
+					
+				</ul>
+
+			</div> 
+		</div>
+		<div id="main">
+			<iframe title="contentFrame" id="iFrame" src="content/MetaViewport/index.html"></iframe>
+		</div>
+		<a target="_blank" href="content/MetaViewport/index.html" id="moreWatch">Mở Rộng</a>
+		<button id="showSlide" class="material-icons-outlined" onclick="openSlide()">reorder</button>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+#demo {
+	margin: 25px;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 15px;
+	background-color: #53BA66;
+	padding: 10px;
+	width: 100px;
+	color: white;
+	text-align: center;
+}
+
+p {
+	margin: 15px;
+}
+
+#Watch {
+	border-radius: 10px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: black;
+	margin: 10px;
+	-webkit-touch-callout: none !important;
+	-webkit-user-select: none !important;
+	-khtml-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
+}
+
+#code pre {
+	width: 90vw;
+  	border-radius: 10px !important;
+}
+
