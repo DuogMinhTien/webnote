@@ -12,17 +12,17 @@
         <h2>Đổi màu chữ trong C</h2>
         <div class="code">
             <h3>Source Code</h3>
-                <pre><code class="language-c">#include &lt;windows.h&gt;
+                <pre class="code-block"><code class="language-c">#include &lt;windows.h&gt;
 void textColor(WORD color){
-&emsp;&emsp;&emsp;&emsp;HANDLE hConsoleOutput;
-&emsp;&emsp;&emsp;&emsp;hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
-&emsp;&emsp;&emsp;&emsp;CONSOLE_SCREEN_BUFFER_INFO screen_buffer_info;
-&emsp;&emsp;&emsp;&emsp;GetConsoleScreenBufferInfo(hConsoleOutput, &screen_buffer_info);
-&emsp;&emsp;&emsp;&emsp;WORD wAttributes = screen_buffer_info.wAttributes;
-&emsp;&emsp;&emsp;&emsp;color &= 0x000f;
-&emsp;&emsp;&emsp;&emsp;wAttributes &= 0xfff0;
-&emsp;&emsp;&emsp;&emsp;wAttributes |= color;
-&emsp;&emsp;&emsp;&emsp;SetConsoleTextAttribute(hConsoleOutput, wAttributes);
+[tab_js]HANDLE hConsoleOutput;
+[tab_js]hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+[tab_js]CONSOLE_SCREEN_BUFFER_INFO screen_buffer_info;
+[tab_js]GetConsoleScreenBufferInfo(hConsoleOutput, &screen_buffer_info);
+[tab_js]WORD wAttributes = screen_buffer_info.wAttributes;
+[tab_js]color &= 0x000f;
+[tab_js]wAttributes &= 0xfff0;
+[tab_js]wAttributes |= color;
+[tab_js]SetConsoleTextAttribute(hConsoleOutput, wAttributes);
 }</code></pre>
         </div>
         <hr class="hrBest" />
@@ -48,9 +48,8 @@ void textColor(WORD color){
                 <li style="color: #FFFFFF" class="bold">15 - #FFFFFF</li>
             </ul>
         </div>
-        <script src="../../script/prism-plugin.js"></script>
-        <script src="../../script/prism-c.js"></script>
         <script src="../../script/function.js"></script>
+        <script defer src="../../script/prism-c.js"></script>
         <script></script>
     </body>
 </html>

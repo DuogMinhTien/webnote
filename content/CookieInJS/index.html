@@ -17,11 +17,11 @@
             <note class="bold not_italic">cname: key lữu trữ, cvalue: giá trị lưu trữ, exdays: thời gian hết hạn (mặc định là 1 năm)</note>
             <note>Cách dùng: setCookie ("name","John",23) //Cookie này sẽ tồn tại trong vòng 23 ngày</note>
             <note>Cách dùng: setCookie ("age",26) //Cookie này sẽ tồn tại trong vòng 365 ngày (1 năm)</note>
-            <pre><code class="language-js">function setCookie(cname, cvalue, exdays=365) {
-&emsp;&emsp;const d = new Date();
-&emsp;&emsp;d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-&emsp;&emsp;let expires = "expires="+d.toUTCString();
-&emsp;&emsp;document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            <pre class="code-block"><code class="language-js">function setCookie(cname, cvalue, exdays=365) {
+[tab_js]const d = new Date();
+[tab_js]d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+[tab_js]let expires = "expires="+d.toUTCString();
+[tab_js]document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }</code></pre>
         </div>
         <div class="code">
@@ -29,19 +29,19 @@
             <note>Sử dụng để lấy value từ document.cookie</note>
             <note class="bold not_italic">cname: key lưu trữ, else_value: nếu key lưu trữ không tồn tại sẽ trả về else_value (mặc địch trả về "")</note>
             <note>Cách dùng: getCookie ("key","does not exist")</note>
-            <pre class="line-numbers language-js" data-start="1"><code>function getCookie(cname, else_value="") {
-&emsp;&emsp;let name = cname + "=";
-&emsp;&emsp;let ca = document.cookie.split(";");
-&emsp;&emsp;for (let i = 0; i < ca.length; i++) {
-&emsp;&emsp;&emsp;&emsp;let c = ca[i];
-&emsp;&emsp;&emsp;&emsp;while (c.charAt(0) == " ") {
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;c = c.substring(1);
-&emsp;&emsp;&emsp;&emsp;}
-&emsp;&emsp;&emsp;&emsp;if (c.indexOf(name) == 0) {
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;return c.substring(name.length, c.length);
-&emsp;&emsp;&emsp;&emsp;}
-&emsp;&emsp;}
-&emsp;&emsp;return else_value;
+            <pre class="code-block"><code class=" language-js">function getCookie(cname, else_value="") {
+[tab_js]let name = cname + "=";
+[tab_js]let ca = document.cookie.split(";");
+[tab_js]for (let i = 0; i &lt; ca.length; i++) {
+[tab_js][tab_js]let c = ca[i];
+[tab_js][tab_js]while (c.charAt(0) == " ") {
+[tab_js][tab_js][tab_js]c = c.substring(1);
+[tab_js][tab_js]}
+[tab_js][tab_js]if (c.indexOf(name) == 0) {
+[tab_js][tab_js][tab_js]return c.substring(name.length, c.length);
+[tab_js][tab_js]}
+[tab_js]}
+[tab_js]return else_value;
 }</code></pre>
         </div>
         <hr class="hrBest"/>
@@ -50,8 +50,8 @@
             <a class="cre" href="https://www.w3schools.com/js/js_cookies.asp">W3School</a>
             <a class="cre" href="https://www.tutorialrepublic.com/javascript-tutorial/javascript-cookies.php">TutorialRepublic</a>
         </div>
-        <script src="../../script/prism-plugin.js"></script>
-        <script src="../../script/prism-js.js"></script>
+        
         <script src="../../script/function.js"></script>
+        <script defer src="../../script/prism-js.js"></script>
     </body>
 </html>

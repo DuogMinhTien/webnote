@@ -235,6 +235,7 @@ hr.hrBest {
 .code pre {
 	width: 90vw;
 	border-radius: 10px !important;
+	position: initial !important;
 }
 
 pre > code {
@@ -253,13 +254,46 @@ pre > code {
 	position: relative;
 	width: 100vw;
 }
+.pseudoMac {
+	width: 90vw;
+	height: 40px;
+	transform: translateY(18px);
+	background-color: #2D2D2D;
+	z-index: 10;
+	border-radius: 10px 10px 0 0;
+	position: relative;
+}
+
+.pseudoMac::before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	border-radius: 100rem;
+	box-shadow: 30px 0 0 0 yellow,
+	60px 0 0 0 green;
+}
 
 /*END CODE DIV:----------------------*/
-
+.code-toolbar {
+	position: relative;
+}
 
 .copy {
+	position: absolute;
+	top: 22px;
+	right: 10px;
 	/*Change background color for Copy Button, used with class ClickBTN*/
 	background-color: orange !important;
+	width: 100px;
+	height: 30px;
+	border-radius: 100rem;
+	border-color: darkorange;
+	z-index: 105;
+	cursor: pointer;
 }
 
 .hidden {
