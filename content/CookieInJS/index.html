@@ -13,10 +13,10 @@
         
         <div class="code">
             <h3>Set Cookie</h3>
-            <note>Sử dụng để thêm một dữ liệu mới vào cookie</note>
-            <note class="bold not_italic">cname: key lữu trữ, cvalue: giá trị lưu trữ, exdays: thời gian hết hạn (mặc định là 1 năm)</note>
-            <note>Cách dùng: setCookie ("name","John",23) //Cookie này sẽ tồn tại trong vòng 23 ngày</note>
-            <note>Cách dùng: setCookie ("age",26) //Cookie này sẽ tồn tại trong vòng 365 ngày (1 năm)</note>
+            <note>Sử dụng để thêm một dữ liệu mới vào cookie
+            <br/><strong>cname: key lữu trữ, cvalue: giá trị lưu trữ, exdays: thời gian hết hạn (mặc định là 1 năm)</strong>
+            <br/>Cách dùng: setCookie ("name","John",23) //Cookie này sẽ tồn tại trong vòng 23 ngày
+            <br/>Cách dùng: setCookie ("age",26) //Cookie này sẽ tồn tại trong vòng 365 ngày (1 năm)</note>
             <pre class="code-block"><code class="language-js">function setCookie(cname, cvalue, exdays=365) {
 [tab_js]const d = new Date();
 [tab_js]d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -26,9 +26,9 @@
         </div>
         <div class="code">
             <h3>Get Cookie</h3>
-            <note>Sử dụng để lấy value từ document.cookie</note>
-            <note class="bold not_italic">cname: key lưu trữ, else_value: nếu key lưu trữ không tồn tại sẽ trả về else_value (mặc địch trả về "")</note>
-            <note>Cách dùng: getCookie ("key","does not exist")</note>
+            <note>Sử dụng để lấy value từ document.cookie
+            <br/><strong>cname: key lưu trữ, else_value: nếu key lưu trữ không tồn tại sẽ trả về else_value (mặc địch trả về "")</strong>
+            <br/>Cách dùng: getCookie ("key","does not exist")</note>
             <pre class="code-block"><code class=" language-js">function getCookie(cname, else_value="") {
 [tab_js]let name = cname + "=";
 [tab_js]let ca = document.cookie.split(";");

@@ -168,23 +168,14 @@ li {
 }
 
 #slider li {
-	height: 50px;
-	line-height: 50px;
+	min-height: 50px;
+	padding: 10px 0;
 	font-size: 1.1rem;
 	padding-left: 10px;
-	overflow-x: auto;
-	overflow-y: hidden;
-	white-space: nowrap;
-}
-
-#slider li::-webkit-scrollbar {
-	width: 10px;
-	height: 8px;
-}
-
-#slider li::-webkit-scrollbar-thumb {
-	background-color: rgb(48,45,53);
-	border-radius: 3px;
+	overflow: hidden;
+	white-space: pre-line;
+	display: flex;
+	align-items: center;
 }
 
 #slider li:hover {
@@ -282,6 +273,7 @@ li {
 	background-color: #47e063 !important;
 	color: black;
 	border-radius: 12px;
+	position: relative;
 }
 
 #loaded {
@@ -328,6 +320,8 @@ li {
     transform: translate(-50%, -50%);
     animation: c2 1s infinite linear;
 }
+
+
 @keyframes c1 {
     to {
 		transform: translate(-50%, -50%) rotate(360deg);

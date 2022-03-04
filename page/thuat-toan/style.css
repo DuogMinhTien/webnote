@@ -1,0 +1,59 @@
+#slider {
+  z-index: 1;
+}
+#slider #slideContent h3 {
+  margin-top: 12px;
+  font-size: 25px;
+}
+
+#language-div {
+  position: relative;
+}
+#language-div #change-language {
+  font-size: 35px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+#language-div #change-language:hover {
+  color: red;
+}
+#language-div #language-list {
+  margin-top: 40px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  border-radius: 15px;
+  z-index: 1;
+  width: 180px;
+  transition: all 0.15s ease;
+}
+#language-div #language-list li {
+  color: black;
+  font-size: 17px;
+}
+#language-div #language-list li img {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 35px;
+  margin-right: 8px;
+}
+#language-div #language-list li:hover {
+  color: #53ba66;
+  background-color: white;
+}
+
+.hideLang {
+  opacity: 0 !important;
+  transform: translateY(15px);
+  z-index: -1 !important;
+}
+
+.showLang {
+  opacity: 1 !important;
+  transform: translateY(0);
+  z-index: 2 !important;
+}
+
+/*# sourceMappingURL=style.css.map */

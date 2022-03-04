@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <link rel="icon" href="../../icon.png"  type="image/x-icon">
+        <title>Ẩn Element</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../style/content.css">
+    </head>
+    <body>
+        <h1>JS TUTORIAL</h1>
+        <h2>Ẩn Element trong JS</h2>
+        <div class="code">
+            <h3>Ẩn một element</h3>
+            <pre class="code-block"><code class=" language-js">const hide = (el) => el.style.display = 'none';
+//ví dụ
+//ẩn một phần tử chứa id 'hideEl'
+hide (document.querySelector ('#hideEl'));
+            </code></pre>
+        </div>
+        <div class="code">
+            <h3>Ẩn tất cả element</h3>
+            <pre class="code-block"><code class=" language-js">const hide = (el) => [...el].forEach(e => (e.style.display = 'none'));
+//ví dụ
+//ẩn tất cả các phần tử &lt;img&gt; trên trang
+hide (document.querySelectorAll ('img'));
+            </code></pre>
+        </div>
+        <div class="wellDiv">
+            <p class="titlePart">Nguồn tham khảo:</p>
+            <a target="_blank" class="cre" href="https://www.facebook.com/105864098319002/posts/271338625104881/">Fanpage CFD Circle</a>
+        </div>
+        <script src="../../script/function.js"></script>
+        <script defer src="../../script/prism-js.js"></script>
+    </body>
+</html>

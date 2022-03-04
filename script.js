@@ -28,7 +28,6 @@ ChooseStyleJS.forEach ((item)  => {
 	}
 });
 
-
 function ChangeFrame (string) {
 	$("#"+previousSlider+".slider_active").classList.remove ("slider_active");
 	$("#"+string).classList.add ("slider_active");

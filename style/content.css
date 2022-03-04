@@ -18,7 +18,7 @@ body {
 body::-webkit-scrollbar {
 	background-color: transparent;
 	opacity: 0.5;
-	width: 11px;
+	width: 6px;
 }
 body::-webkit-scrollbar-thumb {
 	background-color: rgba(128,128,128,0.2);
@@ -108,15 +108,31 @@ h3 {
 note {
 	/*Element for note*/
 	width: 90%;
-	font-style: italic;	
-	margin-top: 10px;
 	font-size: 17px;
 	display: block;
+	background-color: rgba(128,128,128,0.1);
+	margin: 10px;
+	padding: 10px;
+	padding-left: 25px;
+	position: relative;
+	border-radius: 10px;
 }
 
+note::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 6px;
+	background-color: burlywood;
+	border-radius: 2px;
+}
+
+
 .wellDiv note {
-	/*Use for wellDiv, width note change 90% to 100%*/
-	width: 100% !important;
+	/*Use for wellDiv, width note change 90% to 95%*/
+	width: 95% !important;
 }
 
 .titlePart {
