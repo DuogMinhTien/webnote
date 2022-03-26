@@ -14,7 +14,7 @@ body {
 	font-family: 'Material Icons Outlined';
 	font-style: normal;
 	font-weight: 400;
-	src: url(../gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
+	src: url(./gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
 }
 
 .material-icons-outlined {
@@ -169,19 +169,14 @@ li {
 
 #slider li {
 	min-height: 50px;
-	padding: 10px 0;
+	padding: 5px 0;
+	margin: 5px 0;
 	font-size: 1.1rem;
 	padding-left: 10px;
 	overflow: hidden;
 	white-space: pre-line;
 	display: flex;
 	align-items: center;
-}
-
-#slider li:hover {
-	background-color: rgb(135, 238, 154);
-	color: black;
-	border-radius: 12px;
 }
 
 #main {
@@ -268,10 +263,9 @@ li {
 #ChooseStyle::-webkit-scrollbar-track {
 	background-color: darkred;
 }
-
-.slider_active {
-	background-color: #47e063 !important;
-	color: black;
+#slider li:hover, .slider_active {
+	background-color: rgba(71, 224, 99, 0.2) !important;
+	color: #47e063;
 	border-radius: 12px;
 	position: relative;
 }

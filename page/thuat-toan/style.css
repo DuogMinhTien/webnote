@@ -8,20 +8,34 @@
 
 #language-div {
   position: relative;
+  margin-left: 5px;
 }
 #language-div #change-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  border: 2px solid #53ba66;
+  color: #53ba66;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 15px;
+}
+#language-div #change-language span {
   font-size: 35px;
-  margin-left: 8px;
   cursor: pointer;
 }
-#language-div #change-language:hover {
-  color: red;
+#language-div #change-language img {
+  width: 45px;
+  margin-left: 5px;
+}
+#language-div #change-language:hover, #language-div #change-language:active, #language-div #change-language:focus {
+  cursor: pointer;
 }
 #language-div #language-list {
-  margin-top: 40px;
   background-color: white;
   position: absolute;
-  top: 0;
+  top: 75px;
   left: 0;
   border: 1px solid black;
   border-radius: 15px;

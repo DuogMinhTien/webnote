@@ -51,3 +51,19 @@ function closeSlide () {
 function openSlide () {
 	slider.style.display = "initial";
 }
+
+$$(".html-code").forEach ((item, index) => {
+	item.insertAdjacentHTML ("afterbegin",'<span class="material-icons-outlined" style="margin-right: 5px;">html</span>');
+})
+
+$$(".css-code").forEach ((item, index) => {
+	item.insertAdjacentHTML ("afterbegin",'<span class="material-icons-outlined" style="margin-right: 5px;">css</span>');
+})
+
+$$(".js-code").forEach ((item, index) => {
+	item.insertAdjacentHTML ("afterbegin",'<span class="material-icons-outlined" style="margin-right: 5px;">javascript</span>');
+})
+
+$$(".other-code").forEach ((item, index) => {
+	item.insertAdjacentHTML ("afterbegin",'<span class="material-icons-outlined" style="margin-right: 5px;">code</span>');
+})

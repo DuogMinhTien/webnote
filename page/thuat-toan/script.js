@@ -2,6 +2,8 @@ var now_language = "vietnamese";
 var list_language = ["english","vietnamese"];
 var showLanguage = false;
 
+$("#now-language").src="img/"+now_language+".png";
+
 list_language.forEach ((item, index) => {
     $("#language-list").insertAdjacentHTML ('afterbegin','<li onclick="changeLanguage('+index+')"><img src="img/'+item+'.png"/>'+capitalizeFirstLetter(item)+'</li>');
     if (item != now_language) {
@@ -37,6 +39,7 @@ function changeLanguage (index) {
         $$(now_language).forEach ((item, index) => {
             item.style.display = "initial";
         })
+        $("#now-language").src="img/"+now_language+".png";
     }
     $("#language-list").classList.remove ('showLang');
     $("#language-list").classList.add ('hiddenLang');

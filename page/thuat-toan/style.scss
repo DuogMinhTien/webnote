@@ -11,20 +11,35 @@
 
 #language-div {
     position: relative;
+    margin-left: 5px;
     #change-language {
-        font-size: 35px;
-        margin-left: 8px;
-        cursor: pointer;
-        &:hover {
-            color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        border: 2px solid #53ba66;
+        color: #53ba66;
+        background-color: whitesmoke;
+        padding: 10px;
+        border-radius: 15px;
+        span {
+            font-size: 35px;
+            cursor: pointer;
+        }
+        img {
+            width: 45px;
+            margin-left: 5px;
+        }
+        &:hover, &:active, &:focus {
+            cursor: pointer;
+            
         }
     }
     
     #language-list {
-        margin-top: 40px;
         background-color: white;
         position: absolute;
-        top: 0;
+        top: 75px;
         left: 0;
         border: 1px solid black;
         border-radius: 15px;
