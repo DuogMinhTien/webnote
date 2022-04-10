@@ -30,6 +30,24 @@ Hiểu một cách đơn giản Web Responsive là phong cách thiết kế webs
             <p>Việc sử dụng em </p>
         </note>
         <div class="code">
+            <h3>Tải file script nếu là trình duyệt IE có version nhỏ hơn 9</h3>
+            <note>Vì trình duyệt IE nhỏ hơn 9 không hỗ trợ CSS3 Media Queries nên cần sử dụng js để có thể responsive được, nếu không phải trình duyệt IE nhỏ hơn 9 thì dòng lệnh này chỉ như một comment không ảnh hưởng gì cả.
+            <br/>&rarr; Tham khảo thêm ở <a href="https://stackoverflow.com/questions/41430406/what-is-the-meaning-of-lt-in-if-lt-ie-9">StackOverflow</a>
+            </note>
+            <pre class="code-block"><code class=" language-html">&lt;!--[if lt IE 9]&gt;
+                &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"&gt;
+                &lt;/script&gt;
+            &lt;![endif]--&gt;
+            </code></pre>
+        </div>
+        <div class="code">
+            <h3>Responsive Chọn File Css Bằng HTML</h3>
+            <note>Sử dụng thuộc tính media trong tag link để tạo breakpoints chọn file css đúng breakpoints cần sử dụng
+            </note>
+            <pre class="code-block"><code class=" language-html">&lt;link rel="stylesheet" media="(min-width: 1024px)" href="./stylePC.css" /&gt;
+            </code></pre>
+        </div>
+        <div class="code">
             <h3>Responsive Cho Mobile</h3>
             <note>Responsive cho mobile: 0px &rarr; 739px
                 <br/>0 &le; x &lt; 740
