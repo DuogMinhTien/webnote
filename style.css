@@ -275,7 +275,7 @@ li {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background-color: #111;
+	background-color: #333;
 	z-index: 100;
 	display: flex;
 	align-items: center;

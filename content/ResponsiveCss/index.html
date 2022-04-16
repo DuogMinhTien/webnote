@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html lang="vi">
-    <head>
-        <link rel="icon" href="../../icon.png"  type="image/x-icon">
-        <title>CSS TUTORIAL</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../../style/content.css">
-    </head>
-    <body>
-        <h1>CSS TUTORIAL</h1>
-        <h2>Responsive trong CSS</h2>
-        <note>
-            <strong>Responsive là gì?</strong>
-            <p> 
-Hiểu một cách đơn giản Web Responsive là phong cách thiết kế website làm sao cho phù hợp trên tất cả các thiết bị, mọi độ phân giải màn hình.
-            </p>
-            <br/>
-            <strong>Nguyên tắc responsive</strong>
-            <p>Responsive cho PC trước, sau đó sử dụng các công cụ như Dev Tools để responsive cho Tablet rồi đến Mobile.
-                <br/>Hướng đi: PC &rarr; Tablet &rarr; Mobile
-            </p>
-            <br/>
-            <strong>Sử dụng responsive hiệu quả</strong>
-            <p>
-                Để sử dụng responsive hiệu quả bạn hãy thêm viewport vào file html của mình, xem hướng dẫn chi tiết <a href="../MetaViewport/index.html" target="_blank">Tại đây</a>
-            </p>
-            <br/>
-            <strong>Vì sao nên sử dụng em thay vì px trong media queries?</strong>
-            <p>Việc sử dụng em </p>
+
+<head>
+    <link rel="icon" href="../../icon.png" type="image/x-icon">
+    <title>CSS TUTORIAL</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../style/content.css">
+</head>
+
+<body>
+    <h1>CSS TUTORIAL</h1>
+    <h2>Responsive trong CSS</h2>
+    <note>
+        <strong>Responsive là gì?</strong>
+        <p>
+            Hiểu một cách đơn giản Web Responsive là phong cách thiết kế website làm sao cho phù hợp trên tất cả các
+            thiết bị, mọi độ phân giải màn hình.
+        </p>
+        <br />
+        <strong>Nguyên tắc responsive</strong>
+        <p>Responsive cho PC trước, sau đó sử dụng các công cụ như Dev Tools để responsive cho Tablet rồi đến Mobile.
+            <br />Hướng đi: PC &rarr; Tablet &rarr; Mobile
+        </p>
+        <br />
+        <strong>Sử dụng responsive hiệu quả</strong>
+        <p>
+            Để sử dụng responsive hiệu quả bạn hãy thêm viewport vào file html của mình, xem hướng dẫn chi tiết <a
+                href="../MetaViewport/index.html" target="_blank">Tại đây</a>
+        </p>
+        <br />
+        <strong>Vì sao nên sử dụng em thay vì px trong media queries?</strong>
+        <p>Việc sử dụng em </p>
+    </note>
+    <div class="code">
+        <h3>Tải file script nếu là trình duyệt IE có version nhỏ hơn 9</h3>
+        <note>Vì trình duyệt IE nhỏ hơn 9 không hỗ trợ CSS3 Media Queries nên cần sử dụng js để có thể responsive được,
+            nếu không phải trình duyệt IE nhỏ hơn 9 thì dòng lệnh này chỉ như một comment không ảnh hưởng gì cả.
+            <br />&rarr; Tham khảo thêm ở <a
+                href="https://stackoverflow.com/questions/41430406/what-is-the-meaning-of-lt-in-if-lt-ie-9">StackOverflow</a>
         </note>
-        <div class="code">
-            <h3>Tải file script nếu là trình duyệt IE có version nhỏ hơn 9</h3>
-            <note>Vì trình duyệt IE nhỏ hơn 9 không hỗ trợ CSS3 Media Queries nên cần sử dụng js để có thể responsive được, nếu không phải trình duyệt IE nhỏ hơn 9 thì dòng lệnh này chỉ như một comment không ảnh hưởng gì cả.
-            <br/>&rarr; Tham khảo thêm ở <a href="https://stackoverflow.com/questions/41430406/what-is-the-meaning-of-lt-in-if-lt-ie-9">StackOverflow</a>
-            </note>
-            <pre class="code-block"><code class=" language-html">&lt;!--[if lt IE 9]&gt;
+        <pre class="code-block"><code class=" language-html">&lt;!--[if lt IE 9]&gt;
                 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"&gt;
                 &lt;/script&gt;
             &lt;![endif]--&gt;
             </code></pre>
-        </div>
-        <div class="code">
-            <h3>Responsive Chọn File Css Bằng HTML</h3>
-            <note>Sử dụng thuộc tính media trong tag link để tạo breakpoints chọn file css đúng breakpoints cần sử dụng
-            </note>
-            <pre class="code-block"><code class=" language-html">&lt;link rel="stylesheet" media="(min-width: 1024px)" href="./stylePC.css" /&gt;
+    </div>
+    <div class="code">
+        <h3>Responsive Chọn File Css Bằng HTML</h3>
+        <note>Sử dụng thuộc tính media trong tag link để tạo breakpoints chọn file css đúng breakpoints cần sử dụng
+        </note>
+        <pre class="code-block"><code class=" language-html">&lt;link rel="stylesheet" media="(min-width: 1024px)" href="./stylePC.css" /&gt;
             </code></pre>
-        </div>
-        <div class="code">
-            <h3>Responsive Cho Mobile</h3>
-            <note>Responsive cho mobile: 0px &rarr; 739px
-                <br/>0 &le; x &lt; 740
-                <br/>739px = 46.1875em
-            </note>
-            <pre class="code-block"><code class=" language-css">@media (max-width: 46.1875em)
+    </div>
+    <div class="code">
+        <h3>Responsive Cho Mobile</h3>
+        <note>Responsive cho mobile: 0px &rarr; 739px
+            <br />0 &le; x &lt; 740
+            <br />739px = 46.1875em
+        </note>
+        <pre class="code-block"><code class=" language-css">@media (max-width: 46.1875em)
             </code></pre>
-        </div>
-        <div class="code">
-            <h3>Responsive Cho Tablet</h3>
-            <note>Responsive cho mobile: 740px -> 1024px</note>
-            <pre class="code-block"><code class=" language-css">@media (min-width: 740px) and (max-width: 1023px)
+    </div>
+    <div class="code">
+        <h3>Responsive Cho Tablet</h3>
+        <note>Responsive cho mobile: 740px -> 1024px</note>
+        <pre class="code-block"><code class=" language-css">@media (min-width: 740px) and (max-width: 1023px)
             </code></pre>
-        </div>
-        <div class="code">
-            <h3>Responsive Cho PC</h3>
-            <note>Responsive cho mobile: 1024px -> Infinity</note>
-            <pre class="code-block"><code class=" language-css">@media (min-width: 1024px)
+    </div>
+    <div class="code">
+        <h3>Responsive Cho PC</h3>
+        <note>Responsive cho mobile: 1024px -> Infinity</note>
+        <pre class="code-block"><code class=" language-css">@media (min-width: 1024px)
             </code></pre>
-        </div>
-        <div class="code">
-            <h3>Responsive Chi Tiết</h3>
-            <note>Chi tiết cho nhiều dòng máy và cấu hình máy khác nhau
-                <br/>Cre: <a href="https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/" target="_blank">ResponsiveDesign</a>
-            </note>
-            <pre class="code-block"><code class=" language-css">/* Smartphones (portrait and landscape) ----------- */
+    </div>
+    <div class="code">
+        <h3>Responsive Chi Tiết</h3>
+        <note>Chi tiết cho nhiều dòng máy và cấu hình máy khác nhau
+            <br />Cre: <a
+                href="https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/"
+                target="_blank">ResponsiveDesign</a>
+        </note>
+        <pre class="code-block"><code class=" language-css">/* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 /* Styles */
 }
@@ -203,15 +211,16 @@ iPad 3
 /* Styles */
 }
             </code></pre>
-        </div>
-        <hr class="hrBest" />
+    </div>
+    <div class="wellDiv">
         <p class="titlePart">Nguồn tham khảo:</p>
-        <div class="wellDiv">
-            <a href="https://responsivedesign.is/" class="cre" target="_blank">ResponsiveDesign</a>
-            <a href="https://fullstack.edu.vn/courses/responsive-web-design" class="cre" target="_blank">F8</a>
-            <a href="https://www.w3schools.com/css/css_rwd_intro.asp" class="cre" target="_blank">W3School</a>
-        </div>
-        <script src="../../script/function.js"></script>
-        <script defer src="../../script/prism-css.js"></script>
-    </body>
+
+        <a href="https://responsivedesign.is/" class="cre" target="_blank">ResponsiveDesign</a>
+        <a href="https://fullstack.edu.vn/courses/responsive-web-design" class="cre" target="_blank">F8</a>
+        <a href="https://www.w3schools.com/css/css_rwd_intro.asp" class="cre" target="_blank">W3School</a>
+    </div>
+    <script src="../../script/function.js"></script>
+    <script defer src="../../script/prism-css.js"></script>
+</body>
+
 </html>

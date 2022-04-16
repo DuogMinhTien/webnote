@@ -131,12 +131,27 @@ outputCode::after {
 	3px 3px darkorange,
 	4px 4px red,
 	5px 5px darkred;
+
 }
 
 .explain li {
 	margin-left: 35px;
 	font-size: 18px;
 	white-space: pre-line;
+	padding: 5px;
+	list-style-type: none;
+	width: max-content;
+	display: block;
+	border-radius: 4px;
+}
+
+.explain li::before {
+	content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+	color: #333; /* Change the color */
+	font-weight: bold; /* If you want it to be bold */
+	display: inline-block; /* Needed to add space between the bullet and the text */
+	width: 1em; /* Also needed for space (tweak if needed) */
+	margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
 note {
@@ -174,17 +189,46 @@ note::before {
 	display: inline-block;
 	font-weight: bold;
 	font-size: 25px;
-	text-shadow: 0 0 2px black,
-	0 0 5px red;
-	color: orange;
 	text-transform: uppercase;
 	font-family: "Arial";
-	background-color: red;
 	border-radius: 10px;
-	padding: 10px 20px;
+	padding-left: 30px;
 	display: block;
-	margin: 15px 5px;
+	margin: 15px 0;
+	padding-top: 20px;
+	position: relative;
+	/* color: brown; */
+	text-decoration:wavy;
+	background: linear-gradient(to right, brown, darkorange);
+	width: max-content;
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  background-clip: text;
+	  color: transparent;
 }
+
+.titlePart::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 95vw;
+	height: 1px;
+	background-color: #333;
+	opacity: 0.2;
+}
+
+.titlePart::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	border-width: 12px;
+	border-style: solid;
+	border-radius: 5px;
+	border-color: brown transparent brown  transparent;
+
+}
+
 /*Style text--------------------*/
 .bold {
 	font-weight: bold !important;
