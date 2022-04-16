@@ -1,6 +1,6 @@
 html-snippets:
 <!DOCTYPE html>
-<html lang="vi">
+<!-- <html lang="vi">
     <head>
         <link rel="icon" href="../../icon.png"  type="image/x-icon">
         <title>[TITLE PAGE]</title>
@@ -18,7 +18,7 @@ html-snippets:
         <script src="../../script/function.js"></script>
         <script defer src="../../script/prism-[TYPE CODE].js"></script>
     </body>
-</html>
+</html> -->
 
 code-snippets:
         <div class="code">
